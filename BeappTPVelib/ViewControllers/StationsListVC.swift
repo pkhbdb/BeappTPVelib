@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  StationsListVC.swift
 //  BeappTPVelib
 //
 //  Created by Alexandre Guzu on 31/01/2018.
@@ -8,18 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StationsListVC: UIViewController {
 
+    @IBOutlet weak var stationsTableView: UITableView!
+    @IBOutlet weak var statusSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var stationsSearchBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
+    
 
 }
-
