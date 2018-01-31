@@ -17,6 +17,7 @@
 		F15BF307202271C7004DB957 /* BeappTPVelibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15BF306202271C7004DB957 /* BeappTPVelibTests.swift */; };
 		F15BF312202271C7004DB957 /* BeappTPVelibUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15BF311202271C7004DB957 /* BeappTPVelibUITests.swift */; };
 		F178A3592022757600344DB8 /* StationsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F178A3582022757600344DB8 /* StationsListVC.swift */; };
+		F178A35D2022797200344DB8 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = F178A35C2022797200344DB8 /* Station.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		F15BF311202271C7004DB957 /* BeappTPVelibUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeappTPVelibUITests.swift; sourceTree = "<group>"; };
 		F15BF313202271C7004DB957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F178A3582022757600344DB8 /* StationsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsListVC.swift; sourceTree = "<group>"; };
+		F178A35C2022797200344DB8 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		F4D6D71A373962FCF35BE3C0 /* Pods-BeappTPVelib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeappTPVelib.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeappTPVelib/Pods-BeappTPVelib.release.xcconfig"; sourceTree = "<group>"; };
 		FC67CD0AA7FD12FECA60E022 /* Pods-BeappTPVelibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeappTPVelibTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeappTPVelibTests/Pods-BeappTPVelibTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +144,7 @@
 				F15BF2F1202271C7004DB957 /* AppDelegate.swift */,
 				F15BF2F8202271C7004DB957 /* Assets.xcassets */,
 				F15BF2FD202271C7004DB957 /* Info.plist */,
+				F178A35C2022797200344DB8 /* Station.swift */,
 			);
 			path = BeappTPVelib;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F15BF2F2202271C7004DB957 /* AppDelegate.swift in Sources */,
+				F178A35D2022797200344DB8 /* Station.swift in Sources */,
 				F178A3592022757600344DB8 /* StationsListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
