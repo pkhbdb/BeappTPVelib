@@ -1,0 +1,768 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		090D4060C9C22D15C7EF16AC /* Pods_BeappTPVelibTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F1C140C8F4F4B8B6BDB79C /* Pods_BeappTPVelibTests.framework */; };
+		9D12DBCE99207AB6F9E35FC9 /* Pods_BeappTPVelib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C50505D74A39B85C50DEF993 /* Pods_BeappTPVelib.framework */; };
+		D643C01906891DF67615AFA6 /* Pods_BeappTPVelibUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F41B74CA8A6D32F71098E0 /* Pods_BeappTPVelibUITests.framework */; };
+		F15BF2F2202271C7004DB957 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15BF2F1202271C7004DB957 /* AppDelegate.swift */; };
+		F15BF2F4202271C7004DB957 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15BF2F3202271C7004DB957 /* ViewController.swift */; };
+		F15BF2F7202271C7004DB957 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15BF2F5202271C7004DB957 /* Main.storyboard */; };
+		F15BF2F9202271C7004DB957 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F15BF2F8202271C7004DB957 /* Assets.xcassets */; };
+		F15BF2FC202271C7004DB957 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15BF2FA202271C7004DB957 /* LaunchScreen.storyboard */; };
+		F15BF307202271C7004DB957 /* BeappTPVelibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15BF306202271C7004DB957 /* BeappTPVelibTests.swift */; };
+		F15BF312202271C7004DB957 /* BeappTPVelibUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15BF311202271C7004DB957 /* BeappTPVelibUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F15BF303202271C7004DB957 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F15BF2E6202271C7004DB957 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F15BF2ED202271C7004DB957;
+			remoteInfo = BeappTPVelib;
+		};
+		F15BF30E202271C7004DB957 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F15BF2E6202271C7004DB957 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F15BF2ED202271C7004DB957;
+			remoteInfo = BeappTPVelib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D5EE2F274D79D88D7EFE795 /* Pods-BeappTPVelibTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeappTPVelibTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeappTPVelibTests/Pods-BeappTPVelibTests.release.xcconfig"; sourceTree = "<group>"; };
+		32F41B74CA8A6D32F71098E0 /* Pods_BeappTPVelibUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeappTPVelibUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37F813A6ED67890FC1980FF4 /* Pods-BeappTPVelib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeappTPVelib.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeappTPVelib/Pods-BeappTPVelib.debug.xcconfig"; sourceTree = "<group>"; };
+		A7F1C140C8F4F4B8B6BDB79C /* Pods_BeappTPVelibTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeappTPVelibTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB9A9454BEF4A81F2FC34F3F /* Pods-BeappTPVelibUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeappTPVelibUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeappTPVelibUITests/Pods-BeappTPVelibUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C50505D74A39B85C50DEF993 /* Pods_BeappTPVelib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeappTPVelib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7002927303A14A54824A630 /* Pods-BeappTPVelibUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeappTPVelibUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeappTPVelibUITests/Pods-BeappTPVelibUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F15BF2EE202271C7004DB957 /* BeappTPVelib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeappTPVelib.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F15BF2F1202271C7004DB957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F15BF2F3202271C7004DB957 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F15BF2F6202271C7004DB957 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F15BF2F8202271C7004DB957 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F15BF2FB202271C7004DB957 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F15BF2FD202271C7004DB957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F15BF302202271C7004DB957 /* BeappTPVelibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeappTPVelibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F15BF306202271C7004DB957 /* BeappTPVelibTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeappTPVelibTests.swift; sourceTree = "<group>"; };
+		F15BF308202271C7004DB957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F15BF30D202271C7004DB957 /* BeappTPVelibUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeappTPVelibUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F15BF311202271C7004DB957 /* BeappTPVelibUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeappTPVelibUITests.swift; sourceTree = "<group>"; };
+		F15BF313202271C7004DB957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4D6D71A373962FCF35BE3C0 /* Pods-BeappTPVelib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeappTPVelib.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeappTPVelib/Pods-BeappTPVelib.release.xcconfig"; sourceTree = "<group>"; };
+		FC67CD0AA7FD12FECA60E022 /* Pods-BeappTPVelibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeappTPVelibTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeappTPVelibTests/Pods-BeappTPVelibTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F15BF2EB202271C7004DB957 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D12DBCE99207AB6F9E35FC9 /* Pods_BeappTPVelib.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F15BF2FF202271C7004DB957 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				090D4060C9C22D15C7EF16AC /* Pods_BeappTPVelibTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F15BF30A202271C7004DB957 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D643C01906891DF67615AFA6 /* Pods_BeappTPVelibUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		557B4839B9F5C6EBDC8B27E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				37F813A6ED67890FC1980FF4 /* Pods-BeappTPVelib.debug.xcconfig */,
+				F4D6D71A373962FCF35BE3C0 /* Pods-BeappTPVelib.release.xcconfig */,
+				FC67CD0AA7FD12FECA60E022 /* Pods-BeappTPVelibTests.debug.xcconfig */,
+				0D5EE2F274D79D88D7EFE795 /* Pods-BeappTPVelibTests.release.xcconfig */,
+				AB9A9454BEF4A81F2FC34F3F /* Pods-BeappTPVelibUITests.debug.xcconfig */,
+				E7002927303A14A54824A630 /* Pods-BeappTPVelibUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		82C672ADD4B7F4EED4380588 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C50505D74A39B85C50DEF993 /* Pods_BeappTPVelib.framework */,
+				A7F1C140C8F4F4B8B6BDB79C /* Pods_BeappTPVelibTests.framework */,
+				32F41B74CA8A6D32F71098E0 /* Pods_BeappTPVelibUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F15BF2E5202271C7004DB957 = {
+			isa = PBXGroup;
+			children = (
+				F15BF2F0202271C7004DB957 /* BeappTPVelib */,
+				F15BF305202271C7004DB957 /* BeappTPVelibTests */,
+				F15BF310202271C7004DB957 /* BeappTPVelibUITests */,
+				F15BF2EF202271C7004DB957 /* Products */,
+				557B4839B9F5C6EBDC8B27E0 /* Pods */,
+				82C672ADD4B7F4EED4380588 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F15BF2EF202271C7004DB957 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F15BF2EE202271C7004DB957 /* BeappTPVelib.app */,
+				F15BF302202271C7004DB957 /* BeappTPVelibTests.xctest */,
+				F15BF30D202271C7004DB957 /* BeappTPVelibUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F15BF2F0202271C7004DB957 /* BeappTPVelib */ = {
+			isa = PBXGroup;
+			children = (
+				F15BF2F1202271C7004DB957 /* AppDelegate.swift */,
+				F15BF2F3202271C7004DB957 /* ViewController.swift */,
+				F15BF2F5202271C7004DB957 /* Main.storyboard */,
+				F15BF2F8202271C7004DB957 /* Assets.xcassets */,
+				F15BF2FA202271C7004DB957 /* LaunchScreen.storyboard */,
+				F15BF2FD202271C7004DB957 /* Info.plist */,
+			);
+			path = BeappTPVelib;
+			sourceTree = "<group>";
+		};
+		F15BF305202271C7004DB957 /* BeappTPVelibTests */ = {
+			isa = PBXGroup;
+			children = (
+				F15BF306202271C7004DB957 /* BeappTPVelibTests.swift */,
+				F15BF308202271C7004DB957 /* Info.plist */,
+			);
+			path = BeappTPVelibTests;
+			sourceTree = "<group>";
+		};
+		F15BF310202271C7004DB957 /* BeappTPVelibUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F15BF311202271C7004DB957 /* BeappTPVelibUITests.swift */,
+				F15BF313202271C7004DB957 /* Info.plist */,
+			);
+			path = BeappTPVelibUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F15BF2ED202271C7004DB957 /* BeappTPVelib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F15BF316202271C7004DB957 /* Build configuration list for PBXNativeTarget "BeappTPVelib" */;
+			buildPhases = (
+				1CC0AF5BCF60E338AB62C190 /* [CP] Check Pods Manifest.lock */,
+				F15BF2EA202271C7004DB957 /* Sources */,
+				F15BF2EB202271C7004DB957 /* Frameworks */,
+				F15BF2EC202271C7004DB957 /* Resources */,
+				EA4425A1B053B482067599FB /* [CP] Embed Pods Frameworks */,
+				2AD51563A301CFEDE87FBD4F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BeappTPVelib;
+			productName = BeappTPVelib;
+			productReference = F15BF2EE202271C7004DB957 /* BeappTPVelib.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F15BF301202271C7004DB957 /* BeappTPVelibTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F15BF319202271C7004DB957 /* Build configuration list for PBXNativeTarget "BeappTPVelibTests" */;
+			buildPhases = (
+				EB9A09A6A7BE1FB1AEDB8EE9 /* [CP] Check Pods Manifest.lock */,
+				F15BF2FE202271C7004DB957 /* Sources */,
+				F15BF2FF202271C7004DB957 /* Frameworks */,
+				F15BF300202271C7004DB957 /* Resources */,
+				B78BFF436AD1B90DD092F625 /* [CP] Embed Pods Frameworks */,
+				BA93FA6EB4D9D0765676B094 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F15BF304202271C7004DB957 /* PBXTargetDependency */,
+			);
+			name = BeappTPVelibTests;
+			productName = BeappTPVelibTests;
+			productReference = F15BF302202271C7004DB957 /* BeappTPVelibTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F15BF30C202271C7004DB957 /* BeappTPVelibUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F15BF31C202271C7004DB957 /* Build configuration list for PBXNativeTarget "BeappTPVelibUITests" */;
+			buildPhases = (
+				634A5F62E1A4C5267D2C26A4 /* [CP] Check Pods Manifest.lock */,
+				F15BF309202271C7004DB957 /* Sources */,
+				F15BF30A202271C7004DB957 /* Frameworks */,
+				F15BF30B202271C7004DB957 /* Resources */,
+				C1A72131AC6E3E3CD92B15F9 /* [CP] Embed Pods Frameworks */,
+				699C4AF66A651221CB2A5871 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F15BF30F202271C7004DB957 /* PBXTargetDependency */,
+			);
+			name = BeappTPVelibUITests;
+			productName = BeappTPVelibUITests;
+			productReference = F15BF30D202271C7004DB957 /* BeappTPVelibUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F15BF2E6202271C7004DB957 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Alexandre Guzu";
+				TargetAttributes = {
+					F15BF2ED202271C7004DB957 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					F15BF301202271C7004DB957 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F15BF2ED202271C7004DB957;
+					};
+					F15BF30C202271C7004DB957 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F15BF2ED202271C7004DB957;
+					};
+				};
+			};
+			buildConfigurationList = F15BF2E9202271C7004DB957 /* Build configuration list for PBXProject "BeappTPVelib" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F15BF2E5202271C7004DB957;
+			productRefGroup = F15BF2EF202271C7004DB957 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F15BF2ED202271C7004DB957 /* BeappTPVelib */,
+				F15BF301202271C7004DB957 /* BeappTPVelibTests */,
+				F15BF30C202271C7004DB957 /* BeappTPVelibUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F15BF2EC202271C7004DB957 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F15BF2FC202271C7004DB957 /* LaunchScreen.storyboard in Resources */,
+				F15BF2F9202271C7004DB957 /* Assets.xcassets in Resources */,
+				F15BF2F7202271C7004DB957 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F15BF300202271C7004DB957 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F15BF30B202271C7004DB957 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1CC0AF5BCF60E338AB62C190 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeappTPVelib-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2AD51563A301CFEDE87FBD4F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeappTPVelib/Pods-BeappTPVelib-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		634A5F62E1A4C5267D2C26A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeappTPVelibUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		699C4AF66A651221CB2A5871 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeappTPVelibUITests/Pods-BeappTPVelibUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B78BFF436AD1B90DD092F625 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeappTPVelibTests/Pods-BeappTPVelibTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA93FA6EB4D9D0765676B094 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeappTPVelibTests/Pods-BeappTPVelibTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1A72131AC6E3E3CD92B15F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeappTPVelibUITests/Pods-BeappTPVelibUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA4425A1B053B482067599FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BeappTPVelib/Pods-BeappTPVelib-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeappTPVelib/Pods-BeappTPVelib-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB9A09A6A7BE1FB1AEDB8EE9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeappTPVelibTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F15BF2EA202271C7004DB957 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F15BF2F4202271C7004DB957 /* ViewController.swift in Sources */,
+				F15BF2F2202271C7004DB957 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F15BF2FE202271C7004DB957 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F15BF307202271C7004DB957 /* BeappTPVelibTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F15BF309202271C7004DB957 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F15BF312202271C7004DB957 /* BeappTPVelibUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F15BF304202271C7004DB957 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F15BF2ED202271C7004DB957 /* BeappTPVelib */;
+			targetProxy = F15BF303202271C7004DB957 /* PBXContainerItemProxy */;
+		};
+		F15BF30F202271C7004DB957 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F15BF2ED202271C7004DB957 /* BeappTPVelib */;
+			targetProxy = F15BF30E202271C7004DB957 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F15BF2F5202271C7004DB957 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F15BF2F6202271C7004DB957 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F15BF2FA202271C7004DB957 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F15BF2FB202271C7004DB957 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F15BF314202271C7004DB957 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F15BF315202271C7004DB957 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F15BF317202271C7004DB957 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37F813A6ED67890FC1980FF4 /* Pods-BeappTPVelib.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WRHBQGMB7U;
+				INFOPLIST_FILE = BeappTPVelib/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexandreguzu.BeappTPVelib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F15BF318202271C7004DB957 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4D6D71A373962FCF35BE3C0 /* Pods-BeappTPVelib.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WRHBQGMB7U;
+				INFOPLIST_FILE = BeappTPVelib/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexandreguzu.BeappTPVelib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F15BF31A202271C7004DB957 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC67CD0AA7FD12FECA60E022 /* Pods-BeappTPVelibTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WRHBQGMB7U;
+				INFOPLIST_FILE = BeappTPVelibTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexandreguzu.BeappTPVelibTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeappTPVelib.app/BeappTPVelib";
+			};
+			name = Debug;
+		};
+		F15BF31B202271C7004DB957 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D5EE2F274D79D88D7EFE795 /* Pods-BeappTPVelibTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WRHBQGMB7U;
+				INFOPLIST_FILE = BeappTPVelibTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexandreguzu.BeappTPVelibTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeappTPVelib.app/BeappTPVelib";
+			};
+			name = Release;
+		};
+		F15BF31D202271C7004DB957 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB9A9454BEF4A81F2FC34F3F /* Pods-BeappTPVelibUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WRHBQGMB7U;
+				INFOPLIST_FILE = BeappTPVelibUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexandreguzu.BeappTPVelibUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BeappTPVelib;
+			};
+			name = Debug;
+		};
+		F15BF31E202271C7004DB957 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7002927303A14A54824A630 /* Pods-BeappTPVelibUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WRHBQGMB7U;
+				INFOPLIST_FILE = BeappTPVelibUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexandreguzu.BeappTPVelibUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BeappTPVelib;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F15BF2E9202271C7004DB957 /* Build configuration list for PBXProject "BeappTPVelib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F15BF314202271C7004DB957 /* Debug */,
+				F15BF315202271C7004DB957 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F15BF316202271C7004DB957 /* Build configuration list for PBXNativeTarget "BeappTPVelib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F15BF317202271C7004DB957 /* Debug */,
+				F15BF318202271C7004DB957 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F15BF319202271C7004DB957 /* Build configuration list for PBXNativeTarget "BeappTPVelibTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F15BF31A202271C7004DB957 /* Debug */,
+				F15BF31B202271C7004DB957 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F15BF31C202271C7004DB957 /* Build configuration list for PBXNativeTarget "BeappTPVelibUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F15BF31D202271C7004DB957 /* Debug */,
+				F15BF31E202271C7004DB957 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F15BF2E6202271C7004DB957 /* Project object */;
+}

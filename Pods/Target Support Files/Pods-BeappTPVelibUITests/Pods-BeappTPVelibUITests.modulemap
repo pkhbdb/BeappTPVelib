@@ -1,0 +1,6 @@
+framework module Pods_BeappTPVelibUITests {
+  umbrella header "Pods-BeappTPVelibUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
