@@ -16,6 +16,7 @@
 		F15BF2FC202271C7004DB957 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F15BF2FA202271C7004DB957 /* LaunchScreen.storyboard */; };
 		F15BF307202271C7004DB957 /* BeappTPVelibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15BF306202271C7004DB957 /* BeappTPVelibTests.swift */; };
 		F15BF312202271C7004DB957 /* BeappTPVelibUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15BF311202271C7004DB957 /* BeappTPVelibUITests.swift */; };
+		F166223320237FE7008C9F04 /* StationDataRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = F166223220237FE7008C9F04 /* StationDataRetriever.swift */; };
 		F1701DB1202316B700AC46AA /* StationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1701DB0202316B700AC46AA /* StationTableViewCell.swift */; };
 		F178A3592022757600344DB8 /* StationsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F178A3582022757600344DB8 /* StationsListVC.swift */; };
 		F178A35D2022797200344DB8 /* StationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F178A35C2022797200344DB8 /* StationViewModel.swift */; };
@@ -58,6 +59,7 @@
 		F15BF30D202271C7004DB957 /* BeappTPVelibUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeappTPVelibUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F15BF311202271C7004DB957 /* BeappTPVelibUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeappTPVelibUITests.swift; sourceTree = "<group>"; };
 		F15BF313202271C7004DB957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F166223220237FE7008C9F04 /* StationDataRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDataRetriever.swift; sourceTree = "<group>"; };
 		F1701DB0202316B700AC46AA /* StationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationTableViewCell.swift; sourceTree = "<group>"; };
 		F178A3582022757600344DB8 /* StationsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsListVC.swift; sourceTree = "<group>"; };
 		F178A35C2022797200344DB8 /* StationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewModel.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				F15BF2F1202271C7004DB957 /* AppDelegate.swift */,
 				F15BF2F8202271C7004DB957 /* Assets.xcassets */,
 				F15BF2FD202271C7004DB957 /* Info.plist */,
+				F166223220237FE7008C9F04 /* StationDataRetriever.swift */,
 			);
 			path = BeappTPVelib;
 			sourceTree = "<group>";
@@ -461,10 +464,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BeappTPVelib/Pods-BeappTPVelib-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -496,6 +501,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F166223320237FE7008C9F04 /* StationDataRetriever.swift in Sources */,
 				F15BF2F2202271C7004DB957 /* AppDelegate.swift in Sources */,
 				F178A35D2022797200344DB8 /* StationViewModel.swift in Sources */,
 				F1701DB1202316B700AC46AA /* StationTableViewCell.swift in Sources */,

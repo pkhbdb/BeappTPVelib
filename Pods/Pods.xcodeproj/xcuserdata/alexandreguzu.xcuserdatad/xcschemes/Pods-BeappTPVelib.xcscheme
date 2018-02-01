@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0920"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "464ABE1980B929A8C4C4E31A62A5B0DD"
+               BlueprintIdentifier = "A806568B941B5292C046DAC7B331475D"
                BuildableName = "Pods_BeappTPVelib.framework"
                BlueprintName = "Pods-BeappTPVelib"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "464ABE1980B929A8C4C4E31A62A5B0DD"
+            BlueprintIdentifier = "A806568B941B5292C046DAC7B331475D"
             BuildableName = "Pods_BeappTPVelib.framework"
             BlueprintName = "Pods-BeappTPVelib"
             ReferencedContainer = "container:Pods.xcodeproj">

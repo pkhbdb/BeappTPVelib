@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import Alamofire
+import PromiseKit
 
-class StationsListVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class StationsListVC: UIViewController, UITableViewDataSource, UITableViewDelegate, StationsDataRetriever {
     
     @IBOutlet weak var stationsTableView: UITableView!
     @IBOutlet weak var statusSegmentedControl: UISegmentedControl!
@@ -23,29 +23,22 @@ class StationsListVC: UIViewController, UITableViewDataSource, UITableViewDelega
         stationsTableView.delegate = self
         stationsTableView.dataSource = self
         
-        Alamofire.request("https://api.jcdecaux.com/vls/v1/stations?contract=NANTES&apiKey=b085c5d6c47ab915bbc5b37033ea026051998176").responseJSON { response in
-            switch response.result {
-            case .success:
-                if let json = response.result.value as? [[String:Any]] {
-                    self.stations = []
-                    
-                    for dictStation in json {
-                        if let station = StationViewModel(json: dictStation) {
-                            self.stations += [station]
-                        }
-                    }
-                    
-                    self.stationsTableView.reloadData()
-                }
-            case .failure(let error):
-                print(error)
-            }
-        }
-
+        self.refreshData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    /**
+     Retrieves the stations data from the 'stations data provider' and refreshes the table view accordingly
+     */
+    func refreshData() {
+        self.retrieveStationsList().then { stationsList -> Void in
+            self.stations = stationsList
+            self.stationsTableView.reloadData()
+        }
+        
     }
     
     // MARK: - UITableViewDelegate and UITableViewDataSource
@@ -62,7 +55,7 @@ class StationsListVC: UIViewController, UITableViewDataSource, UITableViewDelega
         let cellIdentifier = "stationCell"
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? StationTableViewCell  else {
-            fatalError("The dequeued cell is not an instance of MealTableViewCell.")
+            fatalError("The dequeued cell is not an instance of StationTableViewCell.")
         }
         
         let currentStation = stations[indexPath.row]

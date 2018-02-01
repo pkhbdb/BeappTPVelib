@@ -7,6 +7,7 @@ target 'BeappTPVelib' do
 
   # Pods for BeappTPVelib
   pod 'Alamofire', '~> 4.5'
+  pod "PromiseKit", "~> 4.4"
 
   target 'BeappTPVelibTests' do
     inherit! :search_paths
