@@ -10,10 +10,12 @@ import UIKit
 import Alamofire
 
 class StationsListVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet weak var stationsTableView: UITableView!
     @IBOutlet weak var statusSegmentedControl: UISegmentedControl!
     @IBOutlet weak var stationsSearchBar: UISearchBar!
+    
+    var stations: [Station] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,5 +41,24 @@ class StationsListVC: UIViewController, UITableViewDataSource, UITableViewDelega
         super.didReceiveMemoryWarning()
     }
     
+    // MARK: - UITableViewDelegate and UITableViewDataSource
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return stations.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellIdentifier = "stationCell"
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? StationTableViewCell  else {
+            fatalError("The dequeued cell is not an instance of MealTableViewCell.")
+        }
+        
+        return cell
+    }
 
 }
