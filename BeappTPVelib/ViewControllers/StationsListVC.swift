@@ -38,7 +38,6 @@ class StationsListVC: UIViewController, UITableViewDataSource, UITableViewDelega
             self.stations = stationsList
             self.stationsTableView.reloadData()
         }
-        
     }
     
     // MARK: - UITableViewDelegate and UITableViewDataSource
