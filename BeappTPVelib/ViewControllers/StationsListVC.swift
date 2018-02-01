@@ -15,11 +15,18 @@ class StationsListVC: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var statusSegmentedControl: UISegmentedControl!
     @IBOutlet weak var stationsSearchBar: UISearchBar!
     
+    private let refreshControl = UIRefreshControl()
+    
     var stations: [StationViewModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // setting up the refreshControl
+        stationsTableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refreshDataTarget(_:)), for: .valueChanged)
+        
+        // setting up the table view delegate and datasource
         stationsTableView.delegate = self
         stationsTableView.dataSource = self
         
@@ -30,13 +37,20 @@ class StationsListVC: UIViewController, UITableViewDataSource, UITableViewDelega
         super.didReceiveMemoryWarning()
     }
     
-    /**
-     Retrieves the stations data from the 'stations data provider' and refreshes the table view accordingly
-     */
+    /// Calls the refreshData() function from the refreshControl when its value changes
+    @objc private func refreshDataTarget(_ sender: Any) {
+        self.refreshControl.beginRefreshing()
+        refreshData()
+    }
+    
+    /// Retrieves the stations data from the 'stations data provider' and refreshes the table view accordingly
     func refreshData() {
         self.retrieveStationsList().then { stationsList -> Void in
             self.stations = stationsList
             self.stationsTableView.reloadData()
+            
+            self.refreshControl.endRefreshing()
+
         }
     }
     

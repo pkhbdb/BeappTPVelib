@@ -20,6 +20,7 @@ extension StationsDataRetriever {
     /// Retrieves the stations list either from internet (if possible), otherwise from memory
     /// - returns: a Promise of StationViewModel(s)
     func retrieveStationsList() -> Promise<[StationViewModel]> {
+        
         return Promise { fullfill, reject in
             Alamofire.request("https://api.jcdecaux.com/vls/v1/stations?contract=NANTES&apiKey=b085c5d6c47ab915bbc5b37033ea026051998176").responseJSON { response in
                 switch response.result {
@@ -55,6 +56,7 @@ extension StationsDataRetriever {
                 }
             }
         }
+        
     }
     
 }
