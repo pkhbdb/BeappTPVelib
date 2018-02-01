@@ -9,7 +9,7 @@
 import UIKit
 import PromiseKit
 
-class StationsListVC: UIViewController, UITableViewDataSource, UITableViewDelegate, StationsDataRetriever {
+class StationsListVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, StationsDataRetriever {
     
     @IBOutlet weak var stationsTableView: UITableView!
     @IBOutlet weak var statusSegmentedControl: UISegmentedControl!
@@ -17,10 +17,22 @@ class StationsListVC: UIViewController, UITableViewDataSource, UITableViewDelega
     
     private let refreshControl = UIRefreshControl()
     
-    var stations: [StationViewModel] = []
+    var filteredStations: [StationViewModel] = [] {
+        didSet {
+            self.stationsTableView.reloadData()
+        }
+    }
+    var stations: [StationViewModel] = [] {
+        didSet {
+            filteredStations = stations
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // setting up the segmentedControl
+        statusSegmentedControl.addTarget(self, action: #selector(segmentedControlChanged(_:)), for: .valueChanged)
         
         // setting up the refreshControl
         stationsTableView.refreshControl = refreshControl
@@ -30,11 +42,20 @@ class StationsListVC: UIViewController, UITableViewDataSource, UITableViewDelega
         stationsTableView.delegate = self
         stationsTableView.dataSource = self
         
+        // setting up the SearchBar delegate
+        stationsSearchBar.delegate = self
+        
+        
         self.refreshData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    /// Calls the refreshData() function from the refreshControl when its value changes
+    @objc private func segmentedControlChanged(_ sender: Any) {
+        filterData(by: stationsSearchBar.text)
     }
     
     /// Calls the refreshData() function from the refreshControl when its value changes
@@ -47,11 +68,33 @@ class StationsListVC: UIViewController, UITableViewDataSource, UITableViewDelega
     func refreshData() {
         self.retrieveStationsList().then { stationsList -> Void in
             self.stations = stationsList
-            self.stationsTableView.reloadData()
             
             self.refreshControl.endRefreshing()
-
         }
+    }
+    
+    /// Filters data by text with the search bar, by status with the segmented control, or both
+    func filterData(by text: String?) {
+        if let _text = text {
+            if _text != "" {
+                filteredStations = stations.filter { $0.name.lowercased().contains(_text.lowercased().trimmingCharacters(in: .whitespaces)) }
+            }
+            else { filteredStations = stations }
+        }
+        
+        switch statusSegmentedControl.selectedSegmentIndex {
+        case 1:
+            filteredStations = filteredStations.filter { $0.status.lowercased() == StationViewModel.Statuses.open.rawValue.lowercased() }
+        case 2:
+            filteredStations = filteredStations.filter { $0.status.lowercased() == StationViewModel.Statuses.closed.rawValue.lowercased() }
+        default:
+            break
+        }
+    }
+    
+    // MARK: - UISearchBarDelegate
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filterData(by: searchText)
     }
     
     // MARK: - UITableViewDelegate and UITableViewDataSource
@@ -61,7 +104,7 @@ class StationsListVC: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return stations.count
+        return filteredStations.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -71,7 +114,7 @@ class StationsListVC: UIViewController, UITableViewDataSource, UITableViewDelega
             fatalError("The dequeued cell is not an instance of StationTableViewCell.")
         }
         
-        let currentStation = stations[indexPath.row]
+        let currentStation = filteredStations[indexPath.row]
         
         cell.stationNameLabel.text = currentStation.name
         cell.availableBikesLabel.text = currentStation.availableBikes
