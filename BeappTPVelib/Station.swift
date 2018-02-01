@@ -8,18 +8,18 @@
 
 import Foundation
 
-struct Station {
+struct StationViewModel {
     let name: String
-    let status: Statuses
-    let availableBikes: Int
-    let bikeStands: Int
+    let status: String
+    let availableBikes: String
+    let lastUpdate: String
     
     enum Statuses: String {
         case open, closed
     }
 }
 
-extension Station {
+extension StationViewModel {
     
     /**
     Initializer optionnel pour une station
@@ -30,7 +30,8 @@ extension Station {
         guard let name = json["name"] as? String,
             let statusString = json["status"] as? String,
             let availableBikes = json["available_bikes"] as? Int,
-            let bikeStands = json["bike_stands"] as? Int else {
+            let bikeStands = json["bike_stands"] as? Int,
+            let timestamp = json["last_update"] as? Double else {
                 return nil
         }
         
@@ -39,8 +40,17 @@ extension Station {
         }
         
         self.name = name
-        self.status = status
-        self.availableBikes = availableBikes
-        self.bikeStands = bikeStands
+        self.status = status.rawValue.uppercased()
+        self.availableBikes = "\(availableBikes)/\(bikeStands)"
+        
+        let lastUpdateDate = Date(timeIntervalSince1970: timestamp / 1000)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+        
+        dateFormatter.locale = Locale(identifier: "fr_FR")
+        
+        self.lastUpdate = dateFormatter.string(from: lastUpdateDate)
     }
 }

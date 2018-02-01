@@ -144,10 +144,10 @@
 				F1701DAF2023169500AC46AA /* UI Components */,
 				F178A35B2022759400344DB8 /* Storyboards */,
 				F178A35A2022757E00344DB8 /* ViewControllers */,
+				F178A35C2022797200344DB8 /* Station.swift */,
 				F15BF2F1202271C7004DB957 /* AppDelegate.swift */,
 				F15BF2F8202271C7004DB957 /* Assets.xcassets */,
 				F15BF2FD202271C7004DB957 /* Info.plist */,
-				F178A35C2022797200344DB8 /* Station.swift */,
 			);
 			path = BeappTPVelib;
 			sourceTree = "<group>";

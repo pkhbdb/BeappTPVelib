@@ -15,20 +15,27 @@ class StationsListVC: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var statusSegmentedControl: UISegmentedControl!
     @IBOutlet weak var stationsSearchBar: UISearchBar!
     
-    var stations: [Station] = []
+    var stations: [StationViewModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        stationsTableView.delegate = self
+        stationsTableView.dataSource = self
         
         Alamofire.request("https://api.jcdecaux.com/vls/v1/stations?contract=NANTES&apiKey=b085c5d6c47ab915bbc5b37033ea026051998176").responseJSON { response in
             switch response.result {
             case .success:
                 if let json = response.result.value as? [[String:Any]] {
+                    self.stations = []
+                    
                     for dictStation in json {
-                        if let station = Station(json: dictStation) {
-                            print(station.name)
+                        if let station = StationViewModel(json: dictStation) {
+                            self.stations += [station]
                         }
                     }
+                    
+                    self.stationsTableView.reloadData()
                 }
             case .failure(let error):
                 print(error)
@@ -57,6 +64,13 @@ class StationsListVC: UIViewController, UITableViewDataSource, UITableViewDelega
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? StationTableViewCell  else {
             fatalError("The dequeued cell is not an instance of MealTableViewCell.")
         }
+        
+        let currentStation = stations[indexPath.row]
+        
+        cell.stationNameLabel.text = currentStation.name
+        cell.availableBikesLabel.text = currentStation.availableBikes
+        cell.statusLabel.text = currentStation.status
+        cell.lastUpdatedLabel.text = currentStation.lastUpdate
         
         return cell
     }
