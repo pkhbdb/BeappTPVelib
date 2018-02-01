@@ -1,5 +1,5 @@
 //
-//  Station.swift
+//  StationViewModel.swift
 //  BeappTPVelib
 //
 //  Created by Alexandre Guzu on 31/01/2018.
