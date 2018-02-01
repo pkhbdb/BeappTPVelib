@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,13 +23,55 @@
                                 <rect key="frame" x="0.0" y="164" width="375" height="503"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="BmV-qh-Tub">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="stationCell" rowHeight="80" id="BmV-qh-Tub" customClass="StationTableViewCell" customModule="BeappTPVelib" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BmV-qh-Tub" id="MWg-Ak-3Fh">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShY-RI-Ebj">
+                                                    <rect key="frame" x="15" y="11" width="43" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bikes_stands" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wm3-xZ-ARm">
+                                                    <rect key="frame" x="15" y="48" width="99" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6L-XT-FBI">
+                                                    <rect key="frame" x="312" y="11" width="48" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="last_updated" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfp-6k-0wL">
+                                                    <rect key="frame" x="262" y="48" width="98" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ShY-RI-Ebj" firstAttribute="leading" secondItem="MWg-Ak-3Fh" secondAttribute="leadingMargin" id="5aL-PP-i2W"/>
+                                                <constraint firstItem="v6L-XT-FBI" firstAttribute="trailing" secondItem="MWg-Ak-3Fh" secondAttribute="trailingMargin" id="7SB-Tg-9eC"/>
+                                                <constraint firstItem="Wm3-xZ-ARm" firstAttribute="bottom" secondItem="MWg-Ak-3Fh" secondAttribute="bottomMargin" id="C1A-2p-Zje"/>
+                                                <constraint firstItem="bfp-6k-0wL" firstAttribute="trailing" secondItem="MWg-Ak-3Fh" secondAttribute="trailingMargin" id="S0P-yl-BJP"/>
+                                                <constraint firstItem="v6L-XT-FBI" firstAttribute="top" secondItem="MWg-Ak-3Fh" secondAttribute="topMargin" id="YGm-Wa-BSQ"/>
+                                                <constraint firstItem="ShY-RI-Ebj" firstAttribute="top" secondItem="MWg-Ak-3Fh" secondAttribute="topMargin" id="l8E-Kc-PUx"/>
+                                                <constraint firstItem="Wm3-xZ-ARm" firstAttribute="leading" secondItem="MWg-Ak-3Fh" secondAttribute="leadingMargin" id="pT2-Vc-N5P"/>
+                                                <constraint firstItem="bfp-6k-0wL" firstAttribute="bottom" secondItem="MWg-Ak-3Fh" secondAttribute="bottomMargin" id="wB8-hx-Kkc"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="availableBikesLabel" destination="Wm3-xZ-ARm" id="mQB-Vs-0Vf"/>
+                                            <outlet property="lastUpdatedLabel" destination="bfp-6k-0wL" id="CkJ-di-XQj"/>
+                                            <outlet property="stationNameLabel" destination="ShY-RI-Ebj" id="7OH-lA-bsV"/>
+                                            <outlet property="statusLabel" destination="v6L-XT-FBI" id="5b0-uP-Dyn"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
