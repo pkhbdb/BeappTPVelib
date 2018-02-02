@@ -118,6 +118,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F1030B022024879F0059CB29 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				F15BF2F1202271C7004DB957 /* AppDelegate.swift */,
+				F15BF2FD202271C7004DB957 /* Info.plist */,
+				F15BF2F8202271C7004DB957 /* Assets.xcassets */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		F1030B03202487D90059CB29 /* Data retriever */ = {
+			isa = PBXGroup;
+			children = (
+				F166223220237FE7008C9F04 /* StationDataRetriever.swift */,
+			);
+			path = "Data retriever";
+			sourceTree = "<group>";
+		};
 		F15BF2E5202271C7004DB957 = {
 			isa = PBXGroup;
 			children = (
@@ -147,10 +165,8 @@
 				F1701DAF2023169500AC46AA /* UI Components */,
 				F178A35B2022759400344DB8 /* Storyboards */,
 				F178A35A2022757E00344DB8 /* ViewControllers */,
-				F15BF2F1202271C7004DB957 /* AppDelegate.swift */,
-				F15BF2F8202271C7004DB957 /* Assets.xcassets */,
-				F15BF2FD202271C7004DB957 /* Info.plist */,
-				F166223220237FE7008C9F04 /* StationDataRetriever.swift */,
+				F1030B03202487D90059CB29 /* Data retriever */,
+				F1030B022024879F0059CB29 /* Supporting files */,
 			);
 			path = BeappTPVelib;
 			sourceTree = "<group>";
