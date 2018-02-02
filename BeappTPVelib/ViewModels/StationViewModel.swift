@@ -67,7 +67,10 @@ class StationViewModel: NSObject, NSCoding {
         
         dateFormatter.locale = Locale(identifier: "fr_FR")
         
-        self.init(name: name, status: status.rawValue.uppercased(), availableBikes: "\(availableBikes)/\(bikeStands)", lastUpdate: dateFormatter.string(from: lastUpdateDate))
+        // the name contains the station number at the beginning, but we don't care about that, so we trim it
+        let trimmedName = name.split(separator: "-", maxSplits: 1, omittingEmptySubsequences: true)[1].trimmingCharacters(in: .whitespaces)
+
+        self.init(name: trimmedName, status: status.rawValue.uppercased(), availableBikes: "\(availableBikes)/\(bikeStands)", lastUpdate: dateFormatter.string(from: lastUpdateDate))
     }
     
     /// Encodes a station data for storing in memory

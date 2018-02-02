@@ -43,7 +43,7 @@ extension StationsDataRetriever {
                         }
                         
                         // fullfilling the Promise with the new data
-                        fullfill(stations)
+                        fullfill(stations.sorted(by: { $0.name < $1.name }))
                     }
                 case .failure(let error):
                     if let stations = NSKeyedUnarchiver.unarchiveObject(withFile: StationViewModel.ArchiveURL.path) as? [StationViewModel] {
