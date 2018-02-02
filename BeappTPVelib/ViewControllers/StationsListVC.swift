@@ -143,7 +143,9 @@ class StationsListVC: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.stationNameLabel.text = currentStation.name
         cell.availableBikesLabel.text = currentStation.availableBikes
         cell.statusLabel.text = currentStation.status
-        cell.lastUpdatedLabel.text = currentStation.lastUpdate
+        cell.lastUpdatedLabel.text = "depuis le \(currentStation.lastUpdate)"
+        
+        cell.statusLabel.textColor = currentStation.status.lowercased() == StationViewModel.Statuses.open.rawValue ? .green : .red
         
         return cell
     }
