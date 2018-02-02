@@ -17,11 +17,14 @@ class StationsListVC: UIViewController, UITableViewDataSource, UITableViewDelega
     
     private let refreshControl = UIRefreshControl()
     
+    // represents the filtered list of stations (by text and/or by status) that is actually displayed
     var filteredStations: [StationViewModel] = [] {
         didSet {
             self.stationsTableView.reloadData()
         }
     }
+    
+    // represents the complete list of stations. We keep it 'untouched' since we use it for filtering
     var stations: [StationViewModel] = [] {
         didSet {
             filteredStations = stations
@@ -45,12 +48,23 @@ class StationsListVC: UIViewController, UITableViewDataSource, UITableViewDelega
         // setting up the SearchBar delegate
         stationsSearchBar.delegate = self
         
+        // setting up the tap gesture recognizer for dismissing the keyboard
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
         
+        // refreshing the data when the view loads
         self.refreshData()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    /// dismisses the keyboard when the user taps around it
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     /// Calls the refreshData() function from the refreshControl when its value changes
@@ -93,8 +107,18 @@ class StationsListVC: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     // MARK: - UISearchBarDelegate
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filterData(by: searchText)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+        searchBar.resignFirstResponder()
+        return true
     }
     
     // MARK: - UITableViewDelegate and UITableViewDataSource
